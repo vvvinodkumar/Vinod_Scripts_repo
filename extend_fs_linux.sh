@@ -27,6 +27,8 @@ df -h -P -T $fs_name | tail -n1 >/var/tmp/filelist.txt
 #exec 0<filelist
 #ifs_old=$IFS
 
+#Resize commands changes for legacy and new versions of Redhat linux
+
 if  [[ $rhel_vers = 6 || $rhel_vers = 5 ]]
 then
 RESIZE=resize2fs
